@@ -34,7 +34,7 @@ country_codes = {
 
 NUMBER, MSGS, DELAY = range(3)
 
-@run_async
+@bot.message_handler(content_types=['text'])
 def getapi(pn, lim, cc):
     global country_codes
     cc = str(cc).strip()
