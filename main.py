@@ -25,8 +25,7 @@ else:
     from config import Config
     
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',level=logging.INFO)
-token = os.environ["BOT_TOKEN"]
-bot = telebot.TeleBot(token)
+
 
 count_inf = 0
 
@@ -36,7 +35,7 @@ country_codes = {
 
 NUMBER, MSGS, DELAY = range(3)
 
-@bot.message_handler(content_types=['text'])
+@run_async
 def getapi(pn, lim, cc):
     global country_codes
     cc = str(cc).strip()
