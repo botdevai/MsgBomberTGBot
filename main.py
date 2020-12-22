@@ -8,7 +8,7 @@ import threading
 import string
 import random
 import base64
-import logging
+
 
 try:
     import requests
@@ -23,7 +23,7 @@ if bool(os.environ.get("ENV", False)):
     from config_sample import Config
 else:
     from config import Config
-    
+import logging    
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',level=logging.INFO)
 
 
